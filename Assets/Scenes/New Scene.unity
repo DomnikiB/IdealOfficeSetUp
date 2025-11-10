@@ -19187,7 +19187,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 374
+    m_Bits: 502
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -26164,7 +26164,7 @@ GameObject:
   - component: {fileID: 2080965447}
   - component: {fileID: 2080965446}
   - component: {fileID: 2080965445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
