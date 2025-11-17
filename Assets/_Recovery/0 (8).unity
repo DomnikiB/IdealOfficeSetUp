@@ -6726,8 +6726,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.3, z: 0.5}
-  m_Center: {x: 0, y: 0, z: -0.000000721775}
+  m_Size: {x: 0.022475298, y: 0.014284065, z: 0.036820054}
+  m_Center: {x: 0, y: -0.0005093188, z: -0.000000721775}
 --- !u!1001 &541460920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7594,7 +7594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &636659137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21487,7 +21487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1700769048
 Transform:
   m_ObjectHideFlags: 0
@@ -21515,7 +21515,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d9e5212a9d37592d7a0ee11711df2ef1, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -27367,8 +27367,10 @@ GameObject:
   - component: {fileID: 4015666029863001888}
   - component: {fileID: 6557381282873760738}
   - component: {fileID: 2828337769547507588}
+  - component: {fileID: 6557381282873760740}
+  - component: {fileID: 6557381282873760739}
   m_Layer: 9
-  m_Name: LightSwitchPlate
+  m_Name: LightSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28221,7 +28223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &4812092363810013272
 GameObject:
   m_ObjectHideFlags: 0
@@ -28239,7 +28241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5273619543491433030
 Transform:
   m_ObjectHideFlags: 0
@@ -28500,14 +28502,13 @@ GameObject:
   - component: {fileID: 247032920129740311}
   - component: {fileID: 537749772}
   - component: {fileID: 6001772421992595162}
-  - component: {fileID: 6001772421992595163}
   m_Layer: 0
   m_Name: SwitchOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6001772421992595162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28521,45 +28522,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightSwitch
   intIcon: {fileID: 0}
-  lightOn: {fileID: 4812092362942639259}
-  lightOff: {fileID: 4812092363810013272}
-  switchOn: {fileID: 7824846298838569252}
-  switchOff: {fileID: 6001772421992595161}
+  lightOn: {fileID: 7824846298838569252}
+  lightOff: {fileID: 6001772421992595161}
+  switchOn: {fileID: 4812092362942639259}
+  switchOff: {fileID: 4812092363810013272}
   toggle: 1
   switchSound: {fileID: 1700769049}
---- !u!114 &6001772421992595163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001772421992595161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773b7af893c8d134185ef5531648674c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  interactionEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6001772421992595162}
-        m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
-        m_MethodName: ToggleLightSwitch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  unTargetEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!54 &6149017508063458892
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28603,6 +28571,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379223401562289699}
   m_Mesh: {fileID: 1588790741415853296, guid: 2fdd95bffa5a84a44971184a13ea23b8, type: 3}
+--- !u!114 &6557381282873760739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379223401562289699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773b7af893c8d134185ef5531648674c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7824846298838569254}
+        m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+        m_MethodName: ToggleLightSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6001772421992595162}
+        m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+        m_MethodName: ToggleLightSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  targetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  unTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &6557381282873760740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379223401562289699}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: -0.25, z: -0.00000011920929}
 --- !u!4 &6629250034506276195
 Transform:
   m_ObjectHideFlags: 0
@@ -28858,15 +28892,13 @@ GameObject:
   - component: {fileID: 6368230748519604115}
   - component: {fileID: 7279483072381434089}
   - component: {fileID: 7824846298838569254}
-  - component: {fileID: 7824846298838569255}
-  - component: {fileID: 7824846298838569256}
   m_Layer: 9
   m_Name: SwitchOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7824846298838569254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28886,60 +28918,6 @@ MonoBehaviour:
   switchOff: {fileID: 6001772421992595161}
   toggle: 0
   switchSound: {fileID: 1700769049}
---- !u!114 &7824846298838569255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824846298838569252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773b7af893c8d134185ef5531648674c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  interactionEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7824846298838569254}
-        m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
-        m_MethodName: ToggleLightSwitch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  unTargetEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!65 &7824846298838569256
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824846298838569252}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.3, z: 0.5}
-  m_Center: {x: 0, y: 0, z: -0.000000721775}
 --- !u!1001 &7863358671218360636
 PrefabInstance:
   m_ObjectHideFlags: 0
