@@ -540,7 +540,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -27527,7 +27527,7 @@ GameObject:
   - component: {fileID: 4027286874543020224}
   - component: {fileID: 6149017508063458892}
   - component: {fileID: 369923612024475592}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: InteractionArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28357,7 +28357,7 @@ GameObject:
   - component: {fileID: 6001772421992595162}
   - component: {fileID: 6001772421992595163}
   - component: {fileID: 6001772421992595164}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: SwitchOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
