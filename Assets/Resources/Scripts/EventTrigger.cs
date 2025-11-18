@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RainTrigger : MonoBehaviour
+public class EventTrigger : MonoBehaviour
 {
     [SerializeField] string tagFilter; //checks player's tag 
     [SerializeField] UnityEvent onTriggerEnter;
