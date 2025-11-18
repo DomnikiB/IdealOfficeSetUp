@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
-	public GameObject intIcon, lightOn, lightOff, switchOn, switchOff;
+	public GameObject lightOn, lightOff, switchOn, switchOff;
 	public bool toggle;
 	public AudioSource switchSound;
 
