@@ -52,9 +52,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ToggleMainMenu",
+                    "name": "StandUp",
                     "type": "Button",
-                    "id": "8594a314-dffc-4a6a-91df-a8b4e6bcd7b6",
+                    "id": "ced6921e-7e68-46aa-81d1-8895ba6d7a97",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -251,12 +251,12 @@
                 },
                 {
                     "name": "",
-                    "id": "42cdb1a6-8fae-441a-b353-bbf0e9adb296",
-                    "path": "<Keyboard>/escape",
+                    "id": "c377daee-5212-4113-b265-ebc044548a89",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyboardMouse",
-                    "action": "ToggleMainMenu",
+                    "action": "StandUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
