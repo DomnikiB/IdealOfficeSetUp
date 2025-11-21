@@ -6272,6 +6272,7 @@ GameObject:
   - component: {fileID: 472004075}
   - component: {fileID: 472004074}
   - component: {fileID: 472004077}
+  - component: {fileID: 472004078}
   m_Layer: 5
   m_Name: 'InfoMenuCanvas '
   m_TagString: Untagged
@@ -6377,6 +6378,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextChangeInfoMenu
   text: {fileID: 580594878}
+--- !u!114 &472004078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472004072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a89078cd5aeb4cf8e029f5f182c762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableUI
+  UItoBeDisabled: {fileID: 449642647}
+  UItoBeEnabled: {fileID: 472004072}
 --- !u!1001 &473928267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27644,7 +27659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1910334972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29112,7 +29127,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 472004078}
         m_TargetAssemblyTypeName: DisableUI, Assembly-CSharp
         m_MethodName: DisableUIMethod
         m_Mode: 1
