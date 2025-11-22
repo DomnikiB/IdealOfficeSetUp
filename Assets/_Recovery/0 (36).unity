@@ -22577,6 +22577,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1987308057}
   - {fileID: 1242743145}
   - {fileID: 900240878174569963}
   - {fileID: 889123525}
@@ -28661,6 +28662,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3032405436396365811, guid: 8062fd9b85c788e418915692eb5c78e3, type: 3}
   m_PrefabInstance: {fileID: 1983063819}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1987308056
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1590653527}
+    m_Modifications:
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6126251
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6878133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7832031
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362782054239856131, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+      propertyPath: m_Name
+      value: Monitor 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+--- !u!4 &1987308057 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4017324689983159481, guid: 470e9283318c23b408d36901ecfc8fdf, type: 3}
+  m_PrefabInstance: {fileID: 1987308056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1988900691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32215,7 +32278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonitorChangeScreen
   newMaterial: {fileID: 2100000, guid: acce22883fea0fce19f92d4b9c2bdb5c, type: 2}
   oldMaterial: {fileID: 3589333493158463532, guid: e8bc2be39de04534b9f89d1685b2f115, type: 3}
-  isChange: 0
+  change: 0
 --- !u!114 &4347218547034139945
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,9 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
 
     [SerializeField] 
     UnityEvent onHoverExit;
+    
+    [SerializeField] 
+    GameObject mainMenu;
 
     bool isHovering = false;
 
@@ -52,21 +55,24 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, m_LayerMask))
         {
-            if (!isHovering && hit.collider.gameObject == this.gameObject)
+            if (mainMenu.activeSelf == false)
             {
-                isHovering = true;
-                onHoverEnter?.Invoke();
-            }
+		    if (!isHovering && hit.collider.gameObject == this.gameObject)
+		    {
+			isHovering = true;
+			onHoverEnter?.Invoke();
+		    }
 
-            if (isHovering && hit.collider.gameObject != this.gameObject)
-            {
-                isHovering = false;
-                onHoverExit?.Invoke();
+		    if (isHovering && hit.collider.gameObject != this.gameObject && mainMenu.activeSelf == false)
+		    {
+			isHovering = false;
+			onHoverExit?.Invoke();
+		    }
             }
         }
         else
         {
-            if (isHovering)
+            if (isHovering && mainMenu.activeSelf == false)
             {
                 isHovering = false;
                 onHoverExit?.Invoke();
@@ -76,7 +82,7 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
 
     void PerformedResponse(InputAction.CallbackContext callbackContext)
     {
-        if (!isHovering) return;
+        if (!isHovering || mainMenu.activeSelf == true) return;
 
         onClicked?.Invoke();
     }

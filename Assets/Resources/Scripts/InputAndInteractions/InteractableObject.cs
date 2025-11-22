@@ -12,42 +12,38 @@ public class InteractableObject : MonoBehaviour
     UnityEvent targetEvent;
     [SerializeField]
     UnityEvent unTargetEvent;
+    [SerializeField]
+    GameObject mainMenu;
 
  
     public void Target()
     {
-        targetEvent?.Invoke();
+    	if (mainMenu.activeSelf == false)
+    	{
+    		targetEvent?.Invoke();
+    	}
     }
 
     public void UnTarget()
     {
-        unTargetEvent?.Invoke();
+    	if (mainMenu.activeSelf == false)
+    	{
+    		unTargetEvent?.Invoke();
+    	}
     }
 
     public void Interact()
     {
-        // Simple interaction logic, e.g., pick up the item or trigger an event
-        Debug.Log("Interacted with " + gameObject.name);
+	if (mainMenu.activeSelf == false)
+    	{
+    		// Simple interaction logic, e.g., pick up the item or trigger an event
+		Debug.Log("Interacted with " + gameObject.name);
 
-        // Do smth here or add it to the exposed UnityEvent on Unity Editor
-        interactionEvent?.Invoke(); 
+		// Do smth here or add it to the exposed UnityEvent on Unity Editor
+		interactionEvent?.Invoke(); 
+    	}
+        
     }
 
-
-    #region examples
-
-
-    public void OnPickUp()
-    {
-        Debug.Log(gameObject.name + " picked up!");
-        // You can either disable or destroy the object
-        gameObject.SetActive(false);
-        //add to inventory?
-    }
-
-    
-
-
-    #endregion
 }
 
