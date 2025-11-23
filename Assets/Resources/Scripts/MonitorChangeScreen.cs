@@ -14,12 +14,13 @@ public class MonitorChangeScreen : MonoBehaviour
             return;
         }
 
-        Material[] mats = meshRenderer.materials;
+        Material[] materials = meshRenderer.materials;
+	Material[] newMaterials = new Material[2];
 	
         isChange = !isChange;
-        
-        mats[1] = isChange ? newMaterial : oldMaterial;
+        newMaterials[0] = materials[0];
+        newMaterials[1] = isChange ? newMaterial : oldMaterial;
 
-        meshRenderer.materials = mats;
+        meshRenderer.materials = newMaterials;
     }
 }
