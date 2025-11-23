@@ -50,15 +50,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "StandUp",
-                    "type": "Button",
-                    "id": "ced6921e-7e68-46aa-81d1-8895ba6d7a97",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -246,17 +237,6 @@
                     "processors": "",
                     "groups": ";KeyboardMouse",
                     "action": "InteractWithItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c377daee-5212-4113-b265-ebc044548a89",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";KeyboardMouse",
-                    "action": "StandUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

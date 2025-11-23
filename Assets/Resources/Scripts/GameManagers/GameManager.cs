@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     
     public void ReloadApp()
     {
-    	SceneManager.LoadScene (0);
+    	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
 }
