@@ -23,4 +23,14 @@ public class TextChangeInfoMenu : MonoBehaviour
     {
     	text.text = "Sailboats is a painting by Henri de Toulouse-Lautrec. The artist, known for his immersion in the colourful and theatrical life of late 19th-century Paris, produced a collection of enticing, elegant, and provocative images that captured the sometimes decadent affairs of the era. In this painting, however, we see a more hidden and unexpected side of his world.";
     }
+    
+    public void InstructionE()
+    {
+    	text.text = "Press [E] to Interact";
+    }
+    
+    public void InstructionClick()
+    {
+    	text.text = "Click to Interact";
+    }
 }

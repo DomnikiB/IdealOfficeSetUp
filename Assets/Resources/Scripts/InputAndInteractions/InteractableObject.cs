@@ -13,12 +13,14 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     UnityEvent unTargetEvent;
     [SerializeField]
-    GameObject mainMenu;
+    GameObject menuToBeDisabled;
+    
+    public PauseManager pauseManager;
 
  
     public void Target()
     {
-    	if (mainMenu.activeSelf == false)
+    	if (menuToBeDisabled.activeSelf == false && pauseManager.isPaused == false)
     	{
     		targetEvent?.Invoke();
     	}
@@ -26,7 +28,7 @@ public class InteractableObject : MonoBehaviour
 
     public void UnTarget()
     {
-    	if (mainMenu.activeSelf == false)
+    	if (menuToBeDisabled.activeSelf == false && pauseManager.isPaused == false)
     	{
     		unTargetEvent?.Invoke();
     	}
@@ -34,7 +36,7 @@ public class InteractableObject : MonoBehaviour
 
     public void Interact()
     {
-	if (mainMenu.activeSelf == false)
+	if (menuToBeDisabled.activeSelf == false && pauseManager.isPaused == false)
     	{
     		// Simple interaction logic, e.g., pick up the item or trigger an event
 		Debug.Log("Interacted with " + gameObject.name);

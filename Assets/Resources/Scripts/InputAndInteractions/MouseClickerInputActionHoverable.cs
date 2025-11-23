@@ -28,6 +28,8 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
     
     [SerializeField] 
     GameObject mainMenu;
+    
+    public PauseManager pauseManager;
 
     bool isHovering = false;
 
@@ -50,12 +52,21 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
 
     void PointerMoved(InputAction.CallbackContext ctx)
     {
-        Vector2 pointerPosition = point.action.ReadValue<Vector2>();
-        Ray ray = m_Camera.ScreenPointToRay(pointerPosition);
+        Ray ray;
+        
+        if (Cursor.lockState == CursorLockMode.Locked)
+	{
+	    ray = m_Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f));
+	}
+	else
+	{
+	    Vector2 pointerPosition = point.action.ReadValue<Vector2>();
+	    ray = m_Camera.ScreenPointToRay(pointerPosition);
+	}
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, m_LayerMask))
         {
-            if (mainMenu.activeSelf == false)
+            if (mainMenu.activeSelf == false && pauseManager.isPaused == false)
             {
 		    if (!isHovering && hit.collider.gameObject == this.gameObject)
 		    {
@@ -63,7 +74,7 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
 			onHoverEnter?.Invoke();
 		    }
 
-		    if (isHovering && hit.collider.gameObject != this.gameObject && mainMenu.activeSelf == false)
+		    if (isHovering && hit.collider.gameObject != this.gameObject)
 		    {
 			isHovering = false;
 			onHoverExit?.Invoke();
@@ -72,7 +83,7 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
         }
         else
         {
-            if (isHovering && mainMenu.activeSelf == false)
+            if (isHovering && mainMenu.activeSelf == false && pauseManager.isPaused == false)
             {
                 isHovering = false;
                 onHoverExit?.Invoke();
@@ -82,7 +93,7 @@ public class MouseClickerInputActionHoverable : MonoBehaviour
 
     void PerformedResponse(InputAction.CallbackContext callbackContext)
     {
-        if (!isHovering || mainMenu.activeSelf == true) return;
+        if (!isHovering || mainMenu.activeSelf == true || pauseManager.isPaused == true) return;
 
         onClicked?.Invoke();
     }

@@ -50,6 +50,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleMainMenu",
+                    "type": "Button",
+                    "id": "2ffc8421-fd94-4488-b14b-0f76feb9e99a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -237,6 +246,17 @@
                     "processors": "",
                     "groups": ";KeyboardMouse",
                     "action": "InteractWithItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ad5a15c-9ae0-4e09-8854-c803cafe6788",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "ToggleMainMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
