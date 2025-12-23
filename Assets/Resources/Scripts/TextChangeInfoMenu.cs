@@ -9,6 +9,7 @@ public class TextChangeInfoMenu : MonoBehaviour
 {
     public TMP_Text text;
     public string url;
+    public CursorManager cursorManager;
     
     public void InfoMenuFisherman() 
     {
@@ -44,6 +45,7 @@ public class TextChangeInfoMenu : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(url))
         {
+            cursorManager.unlockCursor();
             Application.OpenURL(url);
         }
     }

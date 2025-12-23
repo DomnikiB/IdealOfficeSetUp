@@ -59,6 +59,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EscInfoMenu",
+                    "type": "Button",
+                    "id": "3c8a5c7b-fb7c-4993-8691-6c4952523fee",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -257,6 +266,17 @@
                     "processors": "",
                     "groups": ";KeyboardMouse",
                     "action": "ToggleMainMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "47be8900-22f2-4979-b77a-8099deb4275f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "EscInfoMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

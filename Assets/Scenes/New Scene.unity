@@ -7016,6 +7016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TextChangeInfoMenu
   text: {fileID: 580594878}
   url: 
+  cursorManager: {fileID: 1958580556}
 --- !u!1001 &473928267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20858,6 +20859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TextChangeInfoMenu
   text: {fileID: 1910334973}
   url: 
+  cursorManager: {fileID: 0}
 --- !u!1 &1399168787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2168503986045970230, guid: 987f8b58555f5ab4fa7a15481ccce400, type: 3}
@@ -30368,33 +30370,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 472004072}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1958580556}
-        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
-        m_MethodName: lockUnlockCursor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 650819899}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: resumeGame
+      - m_Target: {fileID: 7789639970487573415}
+        m_TargetAssemblyTypeName: EscapeInfoMenu, Assembly-CSharp
+        m_MethodName: onEscapeInfoMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33747,6 +33725,7 @@ GameObject:
   - component: {fileID: 7789639970487573413}
   - component: {fileID: 5815276750687324117}
   - component: {fileID: 7789639970487573414}
+  - component: {fileID: 7789639970487573415}
   m_Layer: 10
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -34397,6 +34376,53 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  pauseManager: {fileID: 650819899}
+--- !u!114 &7789639970487573415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815276750687324121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e1a25ed0f9aeb4bb11446b830da1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EscapeInfoMenu
+  infoMenu: {fileID: 472004072}
+  pauseGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 650819899}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: resumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  lockCursor:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1958580556}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: lockCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  otherEvents:
+    m_PersistentCalls:
+      m_Calls: []
   pauseManager: {fileID: 650819899}
 --- !u!1 &7824846298838569252
 GameObject:
