@@ -14,13 +14,19 @@ public class ToggleMainMenu : MonoBehaviour
     //setInactive all other menus
     [SerializeField]
     UnityEvent otherEvents;
+
+    public PauseManager pauseManager;
     
     
     public void OnToggleMainMenu()
     {
+        //only if game is not already paused by another menu 
+        if ((!pauseManager.isPaused && !mainMenu.activeSelf) || (pauseManager.isPaused && mainMenu.activeSelf))
+        {
+            pauseGame?.Invoke();
+            lockCursor?.Invoke();
+        }
         mainMenu.SetActive(!mainMenu.activeSelf);
-        pauseGame?.Invoke();
-        lockCursor?.Invoke();
         otherEvents?.Invoke();
     }
 }

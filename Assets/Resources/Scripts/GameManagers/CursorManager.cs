@@ -14,16 +14,15 @@ public class CursorManager : MonoBehaviour
     public void unlockCursor()
     {
     	Cursor.lockState = CursorLockMode.None;
-	Cursor.visible = true;
-	isLocked = false;
-	Debug.Log("cursor state" + Cursor.lockState);
+	    Cursor.visible = true;
+	    isLocked = false;
     }
     
     public void lockCursor()
     {
     	Cursor.lockState = CursorLockMode.Locked;
-	Cursor.visible = false;
-	isLocked = true;
+	    Cursor.visible = false;
+	    isLocked = true;
     }
     
     public void lockUnlockCursor()

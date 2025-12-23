@@ -11,7 +11,9 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		[Header("Player")]
+        public bool canLook = true; //boolean to disable camera control when paused
+
+        [Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -131,6 +133,9 @@ namespace StarterAssets
 
 		private void CameraRotation()
 		{
+			if (!canLook)
+				return;
+
 			// if there is an input
 			if (_input.look.sqrMagnitude >= _threshold)
 			{
